@@ -13,7 +13,6 @@
             --white: #ffffff;
             --light-gray: #f5f5f5;
             --dark-gray: #333333;
-            --text-gray: #666666;
         }
         
         * {
@@ -26,7 +25,6 @@
         body {
             line-height: 1.6;
             color: var(--dark-gray);
-            background-color: var(--white);
         }
         
         .container {
@@ -36,7 +34,6 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -56,64 +53,11 @@
         .logo {
             display: flex;
             align-items: center;
-        }
-        
-        .logo-icon {
-            background-color: var(--primary-green);
-            color: var(--white);
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 20px;
-        }
-        
-        .logo-text {
             font-size: 24px;
             font-weight: 700;
             color: var(--primary-green);
         }
         
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark-gray);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-green);
-        }
-        
-        .cta-button {
-            background-color: var(--primary-green);
-            color: var(--white);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: var(--dark-green);
-        }
-        
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
             color: var(--white);
@@ -122,35 +66,38 @@
         }
         
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            line-height: 1.2;
         }
         
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 30px;
-            opacity: 0.9;
         }
         
         .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 30px;
+            margin: 30px 0;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
         }
         
         .btn-primary {
             background-color: var(--gold);
             color: var(--dark-gray);
             border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
         }
         
         .btn-primary:hover {
@@ -162,147 +109,15 @@
             background-color: transparent;
             color: var(--white);
             border: 2px solid var(--white);
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
         }
         
         .btn-secondary:hover {
             background-color: rgba(255,255,255,0.1);
         }
         
-        /* Features Section */
-        .features {
-            padding: 100px 0;
-            background-color: var(--light-gray);
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.2rem;
-            color: var(--dark-gray);
-            margin-bottom: 15px;
-        }
-        
-        .section-title p {
-            color: var(--text-gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            background-color: var(--light-gold);
-            color: var(--primary-green);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--dark-gray);
-        }
-        
-        .feature-card p {
-            color: var(--text-gray);
-        }
-        
-        /* How It Works */
-        .how-it-works {
-            padding: 100px 0;
-        }
-        
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-        
-        .step {
-            flex: 1;
-            min-width: 250px;
-            text-align: center;
-            padding: 0 20px;
-            margin-bottom: 30px;
-        }
-        
-        .step-number {
-            background-color: var(--primary-green);
-            color: var(--white);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-        }
-        
-        .step h3 {
-            margin-bottom: 15px;
-            color: var(--dark-gray);
-        }
-        
-        .step p {
-            color: var(--text-gray);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background-color: var(--primary-green);
-            color: var(--white);
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-        
         .email-signup {
             max-width: 500px;
-            margin: 0 auto;
+            margin: 30px auto;
             display: flex;
             gap: 10px;
         }
@@ -315,274 +130,452 @@
             font-size: 1rem;
         }
         
-        /* Footer */
+        .features {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Suggestions Section */
+        .suggestions {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .suggestions-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .suggestions-form {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .form-textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .suggestion-type {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .suggestion-option {
+            position: relative;
+        }
+
+        .suggestion-option input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .suggestion-label {
+            display: block;
+            padding: 12px;
+            background: var(--white);
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .suggestion-option input:checked + .suggestion-label {
+            background: var(--primary-green);
+            color: var(--white);
+            border-color: var(--primary-green);
+        }
+
+        /* Floating Suggestions Button */
+        .suggestions-fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-green);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .suggestions-fab:hover {
+            transform: scale(1.1);
+            background: var(--dark-green);
+        }
+
+        .suggestions-fab span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+        
         footer {
             background-color: var(--dark-gray);
             color: var(--white);
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--white);
-        }
-        
-        .copyright {
+            padding: 40px 0;
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #444;
-            color: #999;
-            font-size: 0.9rem;
         }
         
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-buttons {
+            .email-signup, .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
             
-            .hero-buttons button {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn-primary, .btn-secondary {
                 width: 100%;
                 max-width: 300px;
+                text-align: center;
             }
-            
-            .steps {
-                flex-direction: column;
+
+            .suggestions-fab {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
             }
-            
-            .email-signup {
-                flex-direction: column;
+
+            .suggestion-type {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Floating Suggestions Button -->
+    <div class="suggestions-fab" onclick="openSuggestionsModal()">
+        <span>💡</span>
+    </div>
+
+    <!-- Suggestions Modal -->
+    <div class="modal" id="suggestionsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Your Ideas</h2>
+                <button class="close-modal" onclick="closeSuggestionsModal()">×</button>
+            </div>
+            <p>Help us build the best platform for Nigerian tradespeople. What features would you like to see?</p>
+            
+            <form class="suggestions-form" id="suggestionForm">
+                <div class="form-group">
+                    <label>What type of suggestion is this?</label>
+                    <div class="suggestion-type">
+                        <div class="suggestion-option">
+                            <input type="radio" id="feature" name="suggestionType" value="feature" checked>
+                            <label class="suggestion-label" for="feature">New Feature</label>
+                        </div>
+                        <div class="suggestion-option">
+                            <input type="radio" id="improvement" name="suggestionType" value="improvement">
+                            <label class="suggestion-label" for="improvement">Improvement</label>
+                        </div>
+                        <div class="suggestion-option">
+                            <input type="radio" id="problem" name="suggestionType" value="problem">
+                            <label class="suggestion-label" for="problem">Report Problem</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestionTitle">Title</label>
+                    <input type="text" id="suggestionTitle" class="form-input" placeholder="Brief title of your suggestion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestionDescription">Description</label>
+                    <textarea id="suggestionDescription" class="form-textarea" placeholder="Tell us more about your idea or suggestion..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="userType">You are a:</label>
+                    <select id="userType" class="form-input">
+                        <option value="">Select one</option>
+                        <option value="trade-pro">Trade Professional</option>
+                        <option value="client">Client/Customer</option>
+                        <option value="both">Both</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%;">Submit Suggestion</button>
+            </form>
+        </div>
+    </div>
+
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <div class="logo-icon">NT</div>
-                <div class="logo-text">NaijaTradeHub</div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#for-trades">For Trades</a></li>
-                <li><a href="#for-clients">For Clients</a></li>
-            </ul>
-            <button class="cta-button">Join Waitlist</button>
+            <div class="logo">NaijaTradeHub</div>
+            <button class="btn-primary" onclick="scrollToSignup()">Join Waitlist</button>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Connecting Nigerian Tradespeople with Local Opportunities</h1>
             <p>Find skilled professionals for your projects or grow your trade business with consistent work opportunities across Nigeria.</p>
+            
             <div class="hero-buttons">
-                <button class="btn-primary">I'm a Trade Professional</button>
-                <button class="btn-secondary">I Need a Trade Professional</button>
+                <a href="#signup" class="btn-primary">I'm a Trade Professional</a>
+                <a href="#signup" class="btn-secondary">I Need a Trade Professional</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose NaijaTradeHub?</h2>
-                <p>We're building the most trusted platform for trades in Nigeria</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">✓</div>
-                    <h3>Verified Professionals</h3>
-                    <p>All tradespeople on our platform are thoroughly vetted and verified, so you can hire with confidence.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Local Opportunities</h3>
-                    <p>Find work or professionals in your local area, from Lagos to Abuja, Port Harcourt to Kano.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Ratings & Reviews</h3>
-                    <p>Transparent rating system helps you choose the best professional for your specific needs.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Direct Communication</h3>
-                    <p>Chat directly with tradespeople to discuss project details and get quotes.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Fair Pricing</h3>
-                    <p>Compare quotes from multiple professionals to ensure you get the best value.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Secure Payments</h3>
-                    <p>Our secure payment system protects both clients and tradespeople.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>How NaijaTradeHub Works</h2>
-                <p>Simple steps to connect tradespeople with opportunities</p>
-            </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Create Your Profile</h3>
-                    <p>Sign up as a trade professional or client and create your detailed profile.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Find Opportunities</h3>
-                    <p>Browse available jobs or professionals based on location and skills.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Connect & Communicate</h3>
-                    <p>Use our platform to discuss project details and requirements.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Get The Job Done</h3>
-                    <p>Complete the work and get paid securely through our platform.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Join The Waitlist Today</h2>
-            <p>Be among the first to access NaijaTradeHub when we launch. Get early access and exclusive benefits.</p>
-            <form class="email-signup" id="waitlist-form">
-                <input type="email" class="email-input" placeholder="Enter your email address" required>
+            
+            <form class="email-signup" id="signup">
+                <input type="email" class="email-input" name="email" placeholder="Enter your email address" required>
                 <button type="submit" class="btn-primary">Join Waitlist</button>
             </form>
-            <p style="margin-top: 15px; font-size: 0.9rem;">We respect your privacy. Unsubscribe at any time.</p>
+            
+            <p><small>Be the first to know when we launch</small></p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2rem;">Why Join NaijaTradeHub?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>For Trade Professionals</h3>
+                    <p>Find consistent work, build your reputation, and grow your business with local and national opportunities.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Verified & Trusted</h3>
+                    <p>All professionals are verified for your peace of mind. No more worrying about unqualified workers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Nationwide Reach</h3>
+                    <p>Opportunities from Lagos to Abuja, Port Harcourt to Kano. Work locally or expand nationally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggestions Section -->
+    <section class="suggestions" id="suggestions">
+        <div class="container">
+            <div class="suggestions-container">
+                <h2 style="text-align: center; margin-bottom: 20px; font-size: 2rem;">Help Us Improve</h2>
+                <p style="text-align: center; color: var(--dark-gray); margin-bottom: 30px;">
+                    We're building this platform for you! Share your ideas and suggestions to help us create the best experience for Nigerian tradespeople.
+                </p>
+                
+                <div class="suggestions-form">
+                    <form id="mainSuggestionForm">
+                        <div class="form-group">
+                            <label>What type of suggestion is this?</label>
+                            <div class="suggestion-type">
+                                <div class="suggestion-option">
+                                    <input type="radio" id="main-feature" name="mainSuggestionType" value="feature" checked>
+                                    <label class="suggestion-label" for="main-feature">New Feature</label>
+                                </div>
+                                <div class="suggestion-option">
+                                    <input type="radio" id="main-improvement" name="mainSuggestionType" value="improvement">
+                                    <label class="suggestion-label" for="main-improvement">Improvement</label>
+                                </div>
+                                <div class="suggestion-option">
+                                    <input type="radio" id="main-problem" name="mainSuggestionType" value="problem">
+                                    <label class="suggestion-label" for="main-problem">Report Problem</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mainSuggestionTitle">Title</label>
+                            <input type="text" id="mainSuggestionTitle" class="form-input" placeholder="Brief title of your suggestion" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mainSuggestionDescription">Description</label>
+                            <textarea id="mainSuggestionDescription" class="form-textarea" placeholder="Tell us more about your idea or suggestion..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mainUserType">You are a:</label>
+                            <select id="mainUserType" class="form-input">
+                                <option value="">Select one</option>
+                                <option value="trade-pro">Trade Professional</option>
+                                <option value="client">Client/Customer</option>
+                                <option value="both">Both</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%;">Submit Suggestion</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NaijaTradeHub</h3>
-                    <p>Connecting skilled Nigerian tradespeople with local and national opportunities.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>For Tradespeople</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Benefits</a></li>
-                        <li><a href="#">Success Stories</a></li>
-                        <li><a href="#">Join Now</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>For Clients</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Find a Pro</a></li>
-                        <li><a href="#">Post a Job</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Help Center</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 NaijaTradeHub. All rights reserved.</p>
-            </div>
+            <p>&copy; 2023 NaijaTradeHub. Connecting Nigerian tradespeople with opportunities.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Currently in development - Join our waitlist for early access</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                <a href="#suggestions" style="color: var(--gold); text-decoration: none;">Share your suggestions</a> to help us improve
+            </p>
         </div>
     </footer>
 
     <script>
-        // Simple form submission handler
-        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+        // Smooth scroll to signup form
+        function scrollToSignup() {
+            document.getElementById('signup').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Waitlist form submission
+        document.querySelector('.email-signup').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('.email-input').value;
             
-            // In a real implementation, you would send this to your backend
-            // For now, we'll just show an alert and clear the form
-            alert(`Thank you! ${email} has been added to our waitlist. We'll notify you when we launch.`);
+            alert(`Thank you ${email}! You've been added to our waitlist. We'll notify you when we launch.`);
             this.querySelector('.email-input').value = '';
-            
-            // Here you would typically send the data to your email collection service
-            // Example with a fictional endpoint:
-            // fetch('/api/waitlist', {
+        });
+
+        // Modal functions
+        function openSuggestionsModal() {
+            document.getElementById('suggestionsModal').style.display = 'flex';
+        }
+
+        function closeSuggestionsModal() {
+            document.getElementById('suggestionsModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('suggestionsModal');
+            if (e.target === modal) {
+                closeSuggestionsModal();
+            }
+        });
+
+        // Suggestion form submissions
+        document.getElementById('suggestionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleSuggestionSubmission(this);
+        });
+
+        document.getElementById('mainSuggestionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleSuggestionSubmission(this);
+        });
+
+        function handleSuggestionSubmission(form) {
+            const formData = {
+                type: form.querySelector('input[name$="SuggestionType"]:checked').value,
+                title: form.querySelector('input[type="text"]').value,
+                description: form.querySelector('textarea').value,
+                userType: form.querySelector('select').value
+            };
+
+            // In production, you would send this to your backend
+            // fetch('/api/suggestions', {
             //   method: 'POST',
             //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify({ email: email })
+            //   body: JSON.stringify(formData)
             // })
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+
+            alert('Thank you for your suggestion! We appreciate your feedback in making NaijaTradeHub better.');
+            form.reset();
+            
+            // Close modal if it's the modal form
+            if (form.id === 'suggestionForm') {
+                closeSuggestionsModal();
+            }
+        }
     </script>
 </body>
 </html>
