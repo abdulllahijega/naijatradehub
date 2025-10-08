@@ -286,7 +286,7 @@
 
         .modal-header {
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
@@ -398,6 +398,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">NaijaTradeHub</div>
+            <!-- FIXED: Header button now properly links to signup form -->
             <button class="btn-primary" onclick="scrollToSignup()">Join Waitlist</button>
         </div>
     </header>
@@ -408,11 +409,12 @@
             <p>Find skilled professionals for your projects or grow your trade business with consistent work opportunities across Nigeria.</p>
             
             <div class="hero-buttons">
-                <a href="#signup" class="btn-primary">I'm a Trade Professional</a>
-                <a href="#signup" class="btn-secondary">I Need a Trade Professional</a>
+                <button class="btn-primary" onclick="scrollToSignup()">I'm a Trade Professional</button>
+                <button class="btn-secondary" onclick="scrollToSignup()">I Need a Trade Professional</button>
             </div>
             
-            <form class="email-signup" id="signup">
+            <!-- Added ID for the form to target -->
+            <form class="email-signup" id="waitlistForm">
                 <input type="email" class="email-input" name="email" placeholder="Enter your email address" required>
                 <button type="submit" class="btn-primary">Join Waitlist</button>
             </form>
@@ -509,15 +511,16 @@
     </footer>
 
     <script>
-        // Smooth scroll to signup form
+        // FIXED: Smooth scroll to signup form function
         function scrollToSignup() {
-            document.getElementById('signup').scrollIntoView({
-                behavior: 'smooth'
+            document.getElementById('waitlistForm').scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
             });
         }
 
         // Waitlist form submission
-        document.querySelector('.email-signup').addEventListener('submit', function(e) {
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('.email-input').value;
             
@@ -560,13 +563,6 @@
                 description: form.querySelector('textarea').value,
                 userType: form.querySelector('select').value
             };
-
-            // In production, you would send this to your backend
-            // fetch('/api/suggestions', {
-            //   method: 'POST',
-            //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify(formData)
-            // })
 
             alert('Thank you for your suggestion! We appreciate your feedback in making NaijaTradeHub better.');
             form.reset();
