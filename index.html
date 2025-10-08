@@ -398,7 +398,6 @@
     <header>
         <div class="container header-container">
             <div class="logo">NaijaTradeHub</div>
-            <!-- FIXED: Header button now properly links to signup form -->
             <button class="btn-primary" onclick="scrollToSignup()">Join Waitlist</button>
         </div>
     </header>
@@ -413,9 +412,10 @@
                 <button class="btn-secondary" onclick="scrollToSignup()">I Need a Trade Professional</button>
             </div>
             
-            <!-- Added ID for the form to target -->
-            <form class="email-signup" id="waitlistForm">
+            <!-- UPDATED: Formspree Integration -->
+            <form class="email-signup" id="waitlistForm" action="https://formspree.io/f/your-form-id" method="POST">
                 <input type="email" class="email-input" name="email" placeholder="Enter your email address" required>
+                <input type="hidden" name="_subject" value="New Waitlist Signup - NaijaTradeHub">
                 <button type="submit" class="btn-primary">Join Waitlist</button>
             </form>
             
@@ -511,7 +511,14 @@
     </footer>
 
     <script>
-        // FIXED: Smooth scroll to signup form function
+        // Visit counter
+        if(!localStorage.pageViewCount) {
+            localStorage.pageViewCount = 0;
+        }
+        localStorage.pageViewCount = parseInt(localStorage.pageViewCount) + 1;
+        console.log('Total page views:', localStorage.pageViewCount);
+
+        // Smooth scroll to signup form function
         function scrollToSignup() {
             document.getElementById('waitlistForm').scrollIntoView({
                 behavior: 'smooth',
@@ -519,14 +526,8 @@
             });
         }
 
-        // Waitlist form submission
-        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('.email-input').value;
-            
-            alert(`Thank you ${email}! You've been added to our waitlist. We'll notify you when we launch.`);
-            this.querySelector('.email-input').value = '';
-        });
+        // Formspree now handles the form submission automatically!
+        // No JavaScript needed for form handling
 
         // Modal functions
         function openSuggestionsModal() {
